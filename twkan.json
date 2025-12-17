@@ -1,0 +1,28 @@
+[
+  {
+    "bookSourceName": "TWKan小说网·修复版",
+    "bookSourceUrl": "https://twkan.com",
+    "bookSourceType": 0,
+    "bookSourceComment": "展开全部目录+去广告",
+    "loginUrl": "",
+    "bookUrlPattern": "https://twkan.com/book/\\d+\\.html",
+    "header": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+    "searchUrl": "https://twkan.com/search/{{key}}",
+    "searchList": ".list-item",
+    "searchName": ".list-title@text",
+    "searchAuthor": ".list-author@text",
+    "searchCover": ".list-cover@src",
+    "searchIntro": ".list-desc@text",
+    "searchNoteUrl": ".list-title@href",
+    "chapterUrl": "{{bookUrl}}/index.html?all=true",
+    "chapterList": ".chapter-list li a",
+    "chapterName": "text",
+    "chapterUrl": "@href",
+    "contentRule": "#content@html",
+    "contentReplace": [
+      "<div style=\"margin:10px;text-align:center;[\\s\\S]*?</div>",
+      "本章完",
+      ".*twkan\\.com.*"
+    ]
+  }
+]
