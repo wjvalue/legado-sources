@@ -1,45 +1,53 @@
-{
-  "bookSourceComment": "由 AI 生成，适配推文看 (twkan.com)",
-  "bookSourceGroup": "精选",
-  "bookSourceName": "推文看",
-  "bookSourceType": 0,
-  "bookSourceUrl": "https://twkan.com",
-  "customOrder": 0,
-  "enabled": true,
-  "enabledCookieJar": false,
-  "enabledExplore": true,
-  "exploreUrl": "全本小说::/top/full/1.html\n连载小说::/top/lastupdate/1.html\n总排行榜::/top/allvisit/1.html",
-  "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\"}",
-  "lastUpdateTime": 1702812000000,
-  "respondTime": 180000,
-  "ruleBookInfo": {
-    "author": "meta[property=\"og:novel:author\"]@content",
-    "coverUrl": "meta[property=\"og:image\"]@content",
-    "intro": "meta[property=\"og:description\"]@content",
-    "kind": "meta[property=\"og:novel:category\"]@content",
-    "lastChapter": "meta[property=\"og:novel:lastest_chapter_name\"]@content",
-    "name": "meta[property=\"og:novel:book_name\"]@content",
-    "tocUrl": "meta[property=\"og:novel:read_url\"]@content"
-  },
-  "ruleContent": {
-    "content": "#content@html",
-    "nextContentUrl": "text.下一页@href",
-    "replaceRegex": "##推文看.*"
-  },
-  "ruleExplore": {},
-  "ruleSearch": {
-    "author": ".author@text",
-    "bookList": ".book-item",
-    "bookUrl": "a@href",
-    "coverUrl": "img@src",
-    "kind": ".category@text",
-    "name": "h4@text"
-  },
-  "ruleToc": {
-    "chapterList": "#list dd a",
-    "chapterName": "text",
-    "chapterUrl": "href"
-  },
-  "searchUrl": "/search.html?searchkey={{key}}",
-  "weight": 0
-}
+[
+  {
+    "bookSourceComment": "适配推文看 (twkan.com)\n正文支持自动翻页合并",
+    "bookSourceGroup": "精选",
+    "bookSourceName": "推文看",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://twkan.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "全本小说::/top/full/{{page}}.html\n连载小说::/top/lastupdate/{{page}}.html\n总排行榜::/top/allvisit/{{page}}.html\n月排行榜::/top/monthvisit/{{page}}.html\n周排行榜::/top/weekvisit/{{page}}.html",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\"}",
+    "lastUpdateTime": 1702812000000,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "meta[property=\"og:novel:author\"]@content",
+      "coverUrl": "meta[property=\"og:image\"]@content",
+      "intro": "meta[property=\"og:description\"]@content",
+      "kind": "meta[property=\"og:novel:category\"]@content",
+      "lastChapter": "meta[property=\"og:novel:lastest_chapter_name\"]@content",
+      "name": "meta[property=\"og:novel:book_name\"]@content",
+      "tocUrl": "meta[property=\"og:novel:read_url\"]@content"
+    },
+    "ruleContent": {
+      "content": "#content@html",
+      "nextContentUrl": "text.下一页@href",
+      "replaceRegex": "##推文看.*|.*https://twkan.com.*"
+    },
+    "ruleExplore": {
+      "author": ".author@text",
+      "bookList": ".book-item",
+      "bookUrl": "a@href",
+      "coverUrl": "img@src",
+      "name": "h4@text"
+    },
+    "ruleSearch": {
+      "author": ".author@text",
+      "bookList": ".book-item",
+      "bookUrl": "a@href",
+      "coverUrl": "img@src",
+      "kind": ".category@text",
+      "name": "h4@text"
+    },
+    "ruleToc": {
+      "chapterList": "#list dd a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/search.html?searchkey={{key}}",
+    "weight": 0
+  }
+]
